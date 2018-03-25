@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_run1"
+        android:enabled="true"
+        android:icon="@drawable/ic_square"
+        android:title="Run"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_run2"
+        android:enabled="true"
+        android:icon="@drawable/ic_square"
+        android:title="Run"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_run3"
+        android:enabled="true"
+        android:icon="@drawable/ic_square"
+        android:title="Run"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_select"
+        android:enabled="true"
+        android:icon="@drawable/ic_mouse"
+        android:title="Выбрать"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_create"
+        android:enabled="true"
+        android:icon="@drawable/ic_new"
+        android:title="Создать"
+        app:showAsAction="ifRoom"/>
+
+</menu>
