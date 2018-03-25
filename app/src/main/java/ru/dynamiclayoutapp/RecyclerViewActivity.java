@@ -62,9 +62,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     private void runLayoutAnimation1() {
         RecyclerView recyclerView = (RecyclerView)findViewById(3);
-        //final Context context = recyclerView.getContext();
         final LayoutAnimationController controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation_fall_down);
-
         recyclerView.setLayoutAnimation(controller);
         recyclerView.getAdapter().notifyDataSetChanged();
         recyclerView.scheduleLayoutAnimation();
@@ -72,9 +70,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     private void runLayoutAnimation2() {
         RecyclerView recyclerView = (RecyclerView)findViewById(3);
-        //final Context context = recyclerView.getContext();
         final LayoutAnimationController controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation_from_bottom);
-
         recyclerView.setLayoutAnimation(controller);
         recyclerView.getAdapter().notifyDataSetChanged();
         recyclerView.scheduleLayoutAnimation();
@@ -82,18 +78,21 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     private void runLayoutAnimation3() {
         RecyclerView recyclerView = (RecyclerView)findViewById(3);
-        //final Context context = recyclerView.getContext();
         final LayoutAnimationController controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation_slide_right);
-
         recyclerView.setLayoutAnimation(controller);
         recyclerView.getAdapter().notifyDataSetChanged();
         recyclerView.scheduleLayoutAnimation();
     }
 
     private void onSelectColumn(){
-        RecyclerView listView = (RecyclerView)findViewById(3);
-        listView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-        listView.scrollToPosition(15);
+        RecyclerView recyclerView = (RecyclerView)findViewById(3);
+        recyclerView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+
+        recyclerView.scrollToPosition(15);
+        final LayoutAnimationController controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation_from_bottom);
+        recyclerView.setLayoutAnimation(controller);
+        recyclerView.getAdapter().notifyDataSetChanged();
+        recyclerView.scheduleLayoutAnimation();
     }
 
     private void onCreateLayout(){
